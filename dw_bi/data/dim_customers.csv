@@ -1,0 +1,6 @@
+customer_id,customer_code,first_name,last_name,email,country,city,signup_date
+1,CUST-001,Anna,Rossi,anna.rossi@example.com,IT,Milano,2025-06-12
+2,CUST-002,Luca,Bianchi,luca.bianchi@example.com,IT,Roma,2025-05-03
+3,CUST-003,Giulia,Verdi,giulia.verdi@example.com,IT,Torino,2025-01-22
+4,CUST-004,Marco,Gallo,marco.gallo@example.com,FR,Paris,2025-03-15
+5,CUST-005,Sara,Neri,sara.neri@example.com,DE,Berlin,2025-02-10

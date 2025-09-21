@@ -1,0 +1,7 @@
+product_id,sku,product_name,category,brand,unit_price
+101,SKU-TSHIRT-001,T-Shirt Basic,Apparel,Alpha,12.99
+102,SKU-TSHIRT-002,T-Shirt Premium,Apparel,Alpha,19.5
+201,SKU-MUG-001,Mug Classic,Home,Beta,7.2
+202,SKU-MUG-002,Mug Colored,Home,Beta,8.9
+301,SKU-MOUSE-001,Mouse Wireless,Electronics,Gamma,24.0
+302,SKU-KEYB-001,Keyboard Compact,Electronics,Gamma,29.0

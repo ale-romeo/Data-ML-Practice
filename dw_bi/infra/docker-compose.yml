@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: dw-postgres
+    environment:
+      POSTGRES_USER: dwuser
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: dwdb
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ../:/repo:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dwuser -d dwdb"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  metabase:
+    image: metabase/metabase:latest
+    container_name: dw-metabase
+    ports:
+      - "3000:3000"
+    environment:
+      MB_ENCRYPTION_SECRET_KEY: ${METABASE_ENCRYPTION_KEY}
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  pgdata:

@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS prices (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    symbol TEXT NOT NULL,
+    date DATE NOT NULL,
+    price REAL NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(symbol, date)
+)
